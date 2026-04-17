@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尊榮貴賓網頁 - 中南部七縣市共同參訪新竹縣補教協會</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .poster-container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vip-photo-frame {
+            border: 4px solid #fbbf24;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .vip-photo-frame:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .county-logo-badge {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid white;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            z-index: 20;
+            background: white;
+            padding: 2px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 主辦方專用的 Logo 標章樣式 */
+        .host-logo-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 3px solid #1e40af;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            z-index: 20;
+            background: white;
+            padding: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .attendee-group {
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid #1e40af;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .topic-card {
+            border-left: 4px solid #fbbf24;
+            background: #f1f5f9;
+            padding: 16px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        /* 3D 立體浮標樣式 */
+        .floating-line-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 100;
+            background-color: #06C755;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 8px 0 #05a346, 0 15px 20px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+        .floating-line-btn:hover {
+            transform: translateY(2px);
+            box-shadow: 0 6px 0 #05a346, 0 10px 15px rgba(0,0,0,0.2);
+        }
+
+        .floating-line-btn:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0 #05a346, 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        @media print {
+            body { background: white; }
+            .poster-container { box-shadow: none; max-width: 100%; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3D 立體浮標 (小編建國的 Line) -->
+    <a href="https://line.me/ti/p/vQcf6cONnl" target="_blank" class="floating-line-btn no-print">
+        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 10.304c0-4.587-4.783-8.304-10.667-8.304-5.884 0-10.667 3.717-10.667 8.304 0 4.108 3.792 7.546 8.904 8.213l-1.612 3.884c-.05.121-.025.258.059.346.062.062.146.096.233.096a.39.39 0 00.154-.033l4.571-3.15c.446.038.904.058 1.362.058 5.884 0 10.667-3.717 10.667-8.313z"/>
+        </svg>
+        <span>建國的 Line</span>
+    </a>
+
+    <div class="poster-container">
+        <!-- 1. 歡迎主標題與 Logo -->
+        <div class="hero-section text-white p-12 text-center relative">
+            <div class="flex flex-col items-center relative z-10">
+                <img src="https://i.postimg.cc/vZcVywTy/web.png" alt="新竹縣補教協會 Logo" class="w-32 h-32 mb-6 bg-white p-2 rounded-full shadow-2xl">
+                <div class="inline-block bg-yellow-400 text-blue-900 px-4 py-1 rounded-full font-black text-sm mb-4 shadow-lg">2026 深度交流盛事</div>
+                <h1 class="text-5xl font-black mb-4 tracking-tighter">熱烈歡迎</h1>
+                <h2 class="text-3xl font-bold opacity-90 tracking-tight">中南部七縣市補教協會 蒞臨參訪</h2>
+                <div class="w-24 h-1 bg-yellow-400 mt-6 mb-4"></div>
+                <p class="text-xl italic font-light">齊聚風城 ・ 經驗共享 ・ 共創未來</p>
+            </div>
+            <!-- 背景裝飾 -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-400 opacity-5 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <!-- 2. 參訪團核心領隊 (貴賓相簿) -->
+        <div class="p-10 bg-slate-50">
+            <div class="flex items-center justify-center space-x-4 mb-10">
+                <div class="h-px bg-slate-300 flex-grow"></div>
+                <h3 class="text-2xl font-black text-slate-800 tracking-widest px-4 flex items-center">
+                    <svg class="w-8 h-8 mr-2 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    參訪團核心代表
+                </h3>
+                <div class="h-px bg-slate-300 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-x-8 gap-y-12">
+                <script>
+                    const vips = [
+                        { city: '屏東縣', name: '林瓊琳', photo: 'https://i.postimg.cc/mZvqCTx2/IMG-7980.jpg', logo: 'https://i.postimg.cc/sfk873Fp/S-651706383-0.jpg' },
+                        { city: '高雄市', name: '王怡瑾', photo: 'https://i.postimg.cc/zDsMKqmB/IMG-7981.jpg', logo: 'https://i.postimg.cc/FFMq3htc/S-651706379-0.jpg' },
+                        { city: '臺南市', name: '洪嘉鴻', photo: 'https://i.postimg.cc/kM0ZK7r2/IMG-7985.jpg', logo: 'https://i.postimg.cc/WpBKgsRG/S-651706388-0.jpg' },
+                        { city: '嘉義縣', name: '林秋娟', photo: 'https://i.postimg.cc/y6M5c7qN/IMG-7979.jpg', logo: 'https://i.postimg.cc/ZYGgpJkv/S-651706374-0.jpg', title: '輔導理事長' },
+                        { city: '雲林縣', name: '謝瑞娥', photo: 'https://i.postimg.cc/SQB5Cm0R/IMG-7982.jpg', logo: 'https://i.postimg.cc/SQB5Cm0z/S-651706378-0.jpg' },
+                        { city: '彰化縣', name: '黃瑞呈', photo: 'https://i.postimg.cc/05T3D9gb/IMG-7984.jpg', logo: 'https://i.postimg.cc/BZryHJWL/S-651706373-0.jpg' },
+                        { city: '南投縣', name: '陳韻偉', photo: 'https://i.postimg.cc/jqp9PRVC/IMG-7983.jpg', logo: 'https://i.postimg.cc/dQbXrJMr/S-651706384-0.jpg' }
+                    ];
+
+                    vips.forEach(vip => {
+                        document.write(`
+                            <div class="flex flex-col items-center">
+                                <div class="relative mb-4">
+                                    <div class="w-32 h-32 rounded-full overflow-hidden vip-photo-frame bg-white p-1">
+                                        <img src="${vip.photo}" alt="${vip.name}" class="w-full h-full object-cover rounded-full">
+                                    </div>
+                                    <img src="${vip.logo}" class="county-logo-badge" alt="${vip.city} Logo">
+                                </div>
+                                <div class="text-blue-800 font-black text-sm mb-1">${vip.city}</div>
+                                <div class="text-xl font-black text-slate-800">${vip.name}</div>
+                                <div class="text-slate-500 text-xs font-bold uppercase mt-1 tracking-widest">${vip.title || '理事長'}</div>
+                            </div>
+                        `);
+                    });
+                </script>
+                <!-- 主辦方 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-600 shadow-xl bg-white p-1">
+                            <img src="https://i.postimg.cc/QN2P1jLB/IMG-8622.jpg" alt="蔡士松" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <!-- 右下角更改為新竹縣補教協會 Logo -->
+                        <div class="host-logo-badge">
+                            <img src="https://i.postimg.cc/vZcVywTy/web.png" class="w-full h-full object-contain" alt="新竹縣補教協會 Logo">
+                        </div>
+                    </div>
+                    <div class="text-blue-900 font-black text-sm mb-1">新竹縣 (主辦)</div>
+                    <div class="text-xl font-black text-blue-900">蔡士松</div>
+                    <div class="text-blue-600 text-xs font-bold uppercase mt-1 tracking-widest">理事長</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 出席人員詳細名單 -->
+        <div class="p-12">
+            <h3 class="text-3xl font-black text-blue-900 mb-8 flex items-center">
+                <span class="bg-blue-900 text-white p-2 rounded-xl mr-4 shadow-lg">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a7 7 0 00-7 7v1h11v-1a7 7 0 00-7-7z"></path></svg>
+                </span>
+                各縣市出席人員名錄
+            </h3>
+
+            <div class="grid grid-cols-2 gap-6">
+                <!-- 臺南 -->
+                <div class="attendee-group row-span-2">
+                    <div class="text-2xl font-black text-blue-900 mb-4 border-b-2 border-slate-100 pb-3">臺南市參訪團</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center"><span class="w-20 font-black text-slate-500">理事長</span><span class="text-xl font-black text-slate-800">洪嘉鴻</span></div>
+                        <div class="flex items-center"><span class="w-20 font-black text-slate-500">總幹事</span><span class="font-bold text-slate-700">吳旋毓</span></div>
+                        <div class="flex items-center"><span class="w-20 font-black text-slate-500">秘書</span><span class="font-bold text-slate-700">楊曜穗</span></div>
+                        <div class="flex items-center"><span class="w-20 font-black text-slate-500">常務理事</span><span class="font-bold text-slate-700">方建宥</span></div>
+                        <div class="flex items-start"><span class="w-20 font-black text-slate-500 mt-1">理事</span><span class="font-bold text-slate-700">吳政瑞、呂嘉元</span></div>
+                    </div>
+                </div>
+
+                <!-- 雲林 -->
+                <div class="attendee-group">
+                    <div class="text-2xl font-black text-blue-900 mb-4 border-b-2 border-slate-100 pb-3">雲林縣參訪團</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><span class="block text-xs text-slate-400 font-bold uppercase">理事長</span><span class="text-lg font-black text-slate-800">謝瑞娥</span></div>
+                        <div><span class="block text-xs text-slate-400 font-bold uppercase">常務理事</span><span class="font-bold text-slate-700">李素蓮</span></div>
+                        <div><span class="block text-xs text-slate-400 font-bold uppercase">理事</span><span class="font-bold text-slate-700">劉邦欽</span></div>
+                        <div><span class="block text-xs text-slate-400 font-bold uppercase">監事</span><span class="font-bold text-slate-700">李淑婉</span></div>
+                    </div>
+                </div>
+
+                <!-- 南投 -->
+                <div class="attendee-group">
+                    <div class="text-2xl font-black text-blue-900 mb-4 border-b-2 border-slate-100 pb-3">南投縣參訪團</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-1"><span class="block text-xs text-slate-400 font-bold uppercase">理事長</span><span class="text-lg font-black text-slate-800">陳韻偉</span></div>
+                        <div class="col-span-1"><span class="block text-xs text-slate-400 font-bold uppercase">理事長特助</span><span class="font-bold text-slate-700">毛炳楠</span></div>
+                        <div class="col-span-2"><span class="block text-xs text-slate-400 font-bold uppercase">常務理事</span><span class="font-bold text-slate-700">賴小莉、邊瑞憲</span></div>
+                    </div>
+                </div>
+
+                <!-- 彰化 -->
+                <div class="attendee-group">
+                    <div class="text-2xl font-black text-blue-900 mb-4 border-b-2 border-slate-100 pb-3">彰化縣參訪團</div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div><span class="block text-[10px] text-slate-400 font-bold">理事長</span><span class="font-black text-slate-800">黃瑞呈</span></div>
+                        <div><span class="block text-[10px] text-slate-400 font-bold">常務監事</span><span class="font-bold text-slate-700">葉子琳</span></div>
+                        <div><span class="block text-[10px] text-slate-400 font-bold">秘書</span><span class="font-bold text-slate-700">王瑞瑗</span></div>
+                    </div>
+                </div>
+
+                <!-- 高雄與屏東並列 -->
+                <div class="grid grid-cols-2 gap-4 col-span-1">
+                    <div class="attendee-group">
+                        <div class="text-xl font-black text-blue-900 mb-2">高雄市</div>
+                        <div class="text-sm font-bold text-slate-700"><span class="text-slate-400 block text-[10px]">理事長</span> 王怡瑾</div>
+                        <div class="text-sm font-bold text-slate-700 mt-2"><span class="text-slate-400 block text-[10px]">常務理事</span> 陳逸虹</div>
+                    </div>
+                    <div class="attendee-group">
+                        <div class="text-xl font-black text-blue-900 mb-2">屏東縣</div>
+                        <div class="text-sm font-bold text-slate-700"><span class="text-slate-400 block text-[10px]">理事長</span> 林瓊琳</div>
+                        <div class="text-sm font-bold text-slate-700 mt-2"><span class="text-slate-400 block text-[10px]">常務理事</span> 陳豐裕</div>
+                    </div>
+                </div>
+
+                <!-- 嘉義 -->
+                <div class="attendee-group">
+                    <div class="text-2xl font-black text-blue-900 mb-4 border-b-2 border-slate-100 pb-3">嘉義縣參訪團</div>
+                    <div><span class="block text-xs text-slate-400 font-bold uppercase">輔導理事長</span><span class="text-lg font-black text-slate-800">林秋娟</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 會議流程 -->
+        <div class="p-12 bg-slate-50">
+            <div class="grid grid-cols-12 gap-10">
+                <div class="col-span-5">
+                    <h3 class="text-2xl font-black text-blue-900 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        參訪行程規劃
+                    </h3>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://i.postimg.cc/0QF87hxq/S-195338276.jpg" alt="會議流程" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="col-span-7">
+                    <h3 class="text-2xl font-black text-blue-900 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        綜合座談核心議題
+                    </h3>
+                    <div class="grid grid-cols-1 gap-4 overflow-y-auto max-h-[600px] pr-2">
+                        <div class="topic-card">
+                            <div class="font-black text-blue-800 mb-1">❤️ 榮昌：工會領域</div>
+                            <div class="text-xs text-slate-600">壯大營運、提升會員福利；補教與工會合作模式及經費分攤機制。</div>
+                        </div>
+                        <div class="topic-card">
+                            <div class="font-black text-blue-800 mb-1">❤️ 士松：協會領域</div>
+                            <div class="text-xs text-slate-600">法規執行與未立案業者處理；偏遠地區研習參與率提升及競選邀約應對。</div>
+                        </div>
+                        <div class="topic-card">
+                            <div class="font-black text-blue-800 mb-1">❤️ 建國：AI 與科技</div>
+                            <div class="text-xs text-slate-600">基本修圖製作專業學習；AI 技術如何融入現有課程及數位行銷策略。</div>
+                        </div>
+                        <div class="topic-card">
+                            <div class="font-black text-blue-800 mb-1">❤️ 惠華：國小經營</div>
+                            <div class="text-xs text-slate-600">家長與補習班共識凝聚；應對缺工問題及滿足現代家家長教育需求。</div>
+                        </div>
+                        <div class="topic-card">
+                            <div class="font-black text-blue-800 mb-1">❤️ 金隆：升學策略</div>
+                            <div class="text-xs text-slate-600">高中生英語力對升大學之具體優勢及申請制度中的採計細節。</div>
+                        </div>
+                        <div class="topic-card">
+                            <div class="font-black text-blue-800 mb-1">❤️ 志清：廠商推廣</div>
+                            <div class="text-xs text-slate-600">中南部設點服務可行性；廠商推廣課程之同業競爭處理機制。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 願景與核心價值 -->
+        <div class="p-12">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-blue-900 text-white p-8 rounded-3xl relative overflow-hidden shadow-2xl">
+                    <h4 class="text-xl font-black text-yellow-400 mb-4 tracking-wider">交流核心價值</h4>
+                    <div class="grid grid-cols-2 gap-4 text-xs">
+                        <div><span class="font-bold text-yellow-300">資源互惠：</span>共享會務與管理。</div>
+                        <div><span class="font-bold text-yellow-300">政策交流：</span>掌握法規與趨勢。</div>
+                        <div><span class="font-bold text-yellow-300">多元經驗：</span>優化經營與管理。</div>
+                        <div><span class="font-bold text-yellow-300">區域結盟：</span>建立跨縣市合作。</div>
+                    </div>
+                    <img src="https://i.postimg.cc/vZcVywTy/web.png" class="absolute bottom-[-20px] right-[-20px] w-24 h-24 opacity-10 grayscale invert">
+                </div>
+                <div class="border-2 border-slate-100 p-8 rounded-3xl flex flex-col justify-center">
+                    <h4 class="text-xl font-black text-blue-900 mb-2 italic">參訪願景</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed italic">
+                        集結中南部七縣市補教菁英，跨越行政疆界。分享經營之見，提升會員人數，共同為臺灣補教教育發展貢獻心力。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部單位 -->
+        <div class="bg-slate-900 text-white p-10">
+            <div class="flex justify-between items-end">
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <span class="bg-blue-600 text-xs px-2 py-0.5 rounded font-bold">主辦</span>
+                        <div class="text-2xl font-black tracking-widest">新竹縣補教協會</div>
+                    </div>
+                    <div class="text-xs opacity-60 font-bold">協辦單位：屏東縣、高雄市、臺南市、嘉義縣、雲林縣、彰化縣、南投縣 補教協會</div>
+                </div>
+                <div class="text-right text-[10px] font-bold opacity-30 uppercase tracking-[0.3em]">
+                    Education & Synergy 2026
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center py-10 text-slate-400 text-xs no-print">
+        💡 建議將此頁面連結分享給來賓。手機預覽與電腦瀏覽皆有良好視覺體驗。
+    </div>
+
+</body>
+</html>
